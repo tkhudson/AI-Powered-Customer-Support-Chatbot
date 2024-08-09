@@ -1,0 +1,3 @@
+[submodule "hudson-ms/hudson-ms/hudsonit-ms-messagingapp"]
+	path = hudson-ms/hudson-ms/hudsonit-ms-messagingapp
+	url = https://github.com/tkhudson/hudsonit-ms-messagingapp.git

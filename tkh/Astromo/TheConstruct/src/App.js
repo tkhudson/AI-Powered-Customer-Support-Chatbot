@@ -6,6 +6,7 @@ import CharacterCreation from "./screens/CharacterCreation";
 import GameSession from "./screens/GameSession";
 import SessionSetup from "./screens/SessionSetup";
 import Settings from "./screens/Settings";
+import { ThemeProvider } from "./theme/ThemeProvider";
 
 // Placeholder screen component
 function PlaceholderScreen({ route }) {
@@ -20,18 +21,24 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="MainMenu">
-        <Stack.Screen
-          name="MainMenu"
-          component={MainMenu}
-          options={{ title: "The Construct" }}
-        />
-        <Stack.Screen name="NewGame" component={SessionSetup} />
-        <Stack.Screen name="ContinueSession" component={PlaceholderScreen} />
-        <Stack.Screen name="Settings" component={Settings} />
-        <Stack.Screen name="GameSession" component={GameSession} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <ThemeProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="MainMenu">
+          <Stack.Screen
+            name="MainMenu"
+            component={MainMenu}
+            options={{ title: "The Construct" }}
+          />
+          <Stack.Screen name="NewGame" component={SessionSetup} />
+          <Stack.Screen
+            name="CharacterCreation"
+            component={CharacterCreation}
+          />
+          <Stack.Screen name="ContinueSession" component={PlaceholderScreen} />
+          <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen name="GameSession" component={GameSession} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }

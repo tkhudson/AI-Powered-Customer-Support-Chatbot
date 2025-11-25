@@ -1,10 +1,11 @@
 streamlit
-langchain
-langchain-openai
-langchain-anthropic
-langchain-google-genai
-langchain-core
+langchain==0.2.16
+langchain-openai==0.1.23
+langchain-anthropic==0.1.23
+langchain-google-genai==1.0.10
+langchain-core==0.2.38
 openai
 anthropic
 google-generativeai
 python-dotenv
+pydantic==2.8.2

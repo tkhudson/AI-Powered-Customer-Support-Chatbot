@@ -1,0 +1,7 @@
+res://scripts/digging_mechanic_new.gd
+res://scripts/game_state.gd
+res://scripts/main_menu.gd
+res://scripts/intro_scene.gd
+res://scripts/game.gd
+res://scripts/audio_manager.gd
+res://scripts/shop.gd

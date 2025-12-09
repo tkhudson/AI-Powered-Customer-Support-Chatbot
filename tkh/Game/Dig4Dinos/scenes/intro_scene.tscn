@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://intro_scene"]
+
+[ext_resource type="VideoStream" uid="uid://astro_intro" path="res://assets/video/AstromoIntro.ogv" id="1"]
+[ext_resource type="Script" path="res://scripts/intro_scene.gd" id="2"]
+
+[node name="IntroScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource("1")
+volume_db = 0.0
+autoplay = true
+paused = false
+expand = true
+stretch_shrink = 1
+
+[node name="SkipButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = -20.0
+text = "Skip"
+flat = true
+
+[node name="SkipLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -90.0
+offset_right = -20.0
+offset_bottom = -65.0
+text = "Press any key to skip"
+horizontal_alignment = 2
+vertical_alignment = 2
